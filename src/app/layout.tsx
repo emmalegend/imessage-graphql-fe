@@ -1,9 +1,11 @@
-import './globals.css'
-
+import "./globals.css";
+import SessionProvider from "./sessionProvider";
 export default function RootLayout({
   children,
+  session,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
+  session: any;
 }) {
   return (
     <html lang="en">
@@ -12,7 +14,9 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <SessionProvider session={session}>{children}</SessionProvider>
+      </body>
     </html>
-  )
+  );
 }
