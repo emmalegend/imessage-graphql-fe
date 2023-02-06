@@ -5,12 +5,11 @@ datasource db {
 
 generator client {
   provider        = "prisma-client-js"
-
 }
 
 model Account {
   id  String  @id @default(auto()) @map("_id") @db.ObjectId
-  userId             String
+  userId             String 
   type               String
   provider           String
   providerAccountId  String

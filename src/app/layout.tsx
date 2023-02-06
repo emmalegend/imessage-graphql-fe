@@ -1,5 +1,5 @@
 import "./globals.css";
-import SessionProvider from "./sessionProvider";
+import Provider from "./providers";
 export default function RootLayout({
   children,
   session,
@@ -15,7 +15,7 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <SessionProvider session={session}>{children}</SessionProvider>
+        <Provider session={session}>{children}</Provider>
       </body>
     </html>
   );
